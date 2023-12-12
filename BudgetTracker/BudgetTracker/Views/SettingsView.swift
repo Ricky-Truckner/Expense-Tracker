@@ -1,3 +1,8 @@
+// SettingsView.swift
+// BudgetTracker
+//
+// Created by Ricky Truckner on 11/21/23.
+//
 import SwiftUI
 
 struct SettingsView: View {
@@ -17,21 +22,21 @@ struct SettingsView: View {
         }
         Section(header: Text("Social Media")) {
             Button(action: {
-              if let url = URL(string: "https://www.instagram.com/ricky.truckner/") { // Replace with your actual URL
+              if let url = URL(string: "https://www.instagram.com/ricky.truckner/") {
                 UIApplication.shared.open(url)
               } else {
                 print("Invalid URL format")
               }
             }) {
-              HStack { // Wrap Text in HStack
+              HStack { 
                 Image(systemName: "camera")
                 Text("Instagram")
                   .font(.body)
-                Spacer() // Fills remaining button space
+                Spacer()
               }
             }
             Button(action: {
-                if let url = URL(string: "https://github.com/Ricky-Truckner/Expense-Tracker") { // Replace with your actual URL
+                if let url = URL(string: "https://github.com/Ricky-Truckner/Expense-Tracker") {
                   UIApplication.shared.open(url)
                 } else {
                   print("Invalid URL format")
@@ -41,26 +46,26 @@ struct SettingsView: View {
                   Image(systemName: "server.rack")
                   Text("Github")
                     .font(.body)
-                  Spacer() // Fills remaining button space
+                  Spacer()
                 }
               }
             Button(action: {
-            if let url = URL(string: "https://www.facebook.com/ricky.truckner/") { // Replace with your actual URL
+            if let url = URL(string: "https://www.facebook.com/ricky.truckner/") {
               UIApplication.shared.open(url)
             } else {
               print("Invalid URL format")
             }
           }) {
-            HStack { // Wrap Text in HStack
+            HStack {
               Image(systemName: "m.circle")
               Text("Meta")
                 .font(.body)
-              Spacer() // Fills remaining button space
+              Spacer()
             }
           }
            
           
-          .frame(width: 200, height: 30) // Adjust button size as needed
+          .frame(width: 200, height: 30)
         }
         Section(header: Text("Display")) {
           Toggle(isOn: $darkModeManager.isDarkMode, label: {

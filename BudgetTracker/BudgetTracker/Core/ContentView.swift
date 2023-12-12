@@ -41,7 +41,7 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 250, height: 250)
-                    .offset(y: -160) // Adjust the offset value for desired position
+                    .offset(y: -160)
                     .padding(.vertical, 32)
                 Text("Expense-Tracker")
                     .font(.title)
@@ -87,7 +87,7 @@ struct ContentView: View {
                 }
             }
         }
-        .environmentObject(expenseList) // Inject ExpenseList into the environment
+        .environmentObject(expenseList)
         .environmentObject(darkModeManager)
 
     }
